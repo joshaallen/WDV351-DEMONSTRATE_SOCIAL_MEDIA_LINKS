@@ -24,6 +24,7 @@ a {
 .container {
   display: flex;
   flex-direction: column;
+  max-width: 1000px;
   width: 90vw;
   margin: 0 auto;
 }
@@ -31,15 +32,51 @@ a {
 header {
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin: 0 0 40px 0;
 }
 
-section.a .img {
+header .nav {
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+}
+
+.nav .govLink a {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.nav .govLink {
+  margin: 0 0 10px 0;
+}
+
+.nav .like iframe {
+  width: 100%;
+  height: 30px;
+}
+
+.nav {
+  align-items: center;
+}
+
+main h1 {
   text-align: center;
 }
 
+section.a .img {
+  text-align: left;
+}
+
 section {
+  margin: 0 0 20px 0;
+}
+
+section.a p {
+  margin: 0 0 20px 0;
+}
+
+section.b p {
   margin: 0 0 20px 0;
 }
 
@@ -51,6 +88,61 @@ footer {
   width: 100%;
   background-color: black;
   height: 50px;
+}
+
+footer div.social {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.youtube, .facebook {
+  min-width: 260px;
+}
+
+.youtube iframe {
+  border: 2px solid green;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.facebook iframe {
+  border: 10px solid green;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 550px) {
+  section.b .facebook iframe {
+    max-width: 500px;
+  }
+}
+@media screen and (min-width: 768px) {
+  header .nav {
+    align-items: flex-end;
+  }
+
+  .nav div.govLink {
+    width: 300px;
+    text-align: left;
+  }
+
+  section.a div.youtube {
+    text-align: right;
+  }
+
+  section.a .youtube iframe {
+    width: 560px;
+    height: 315px;
+  }
+
+  section.c div.twitter {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
 /*# sourceMappingURL=demonstrateSocialMediaLinks.css.map */
