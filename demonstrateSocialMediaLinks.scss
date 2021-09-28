@@ -6,14 +6,13 @@
 }
 html {
   height: 100%;
-  font-size: 100%;
+  font-size: 62.5%;
   width: 100%;
 }
 body {
   min-height: 100%;
-  line-height: 1.5;
-  font-family: 'Courier New', Courier, monospace;
   width: 100%;
+  line-height: 1.5;
 }
 a {
   text-decoration: none;
@@ -58,8 +57,15 @@ main h1 {
 }
 section.a .img {
   text-align: left;
-}
-
+ 
+ }
+ section.a .img img {
+ max-width: 100%;
+height: auto;
+border-radius: 50%;
+border: 1px solid #ddd;
+padding: 5px;
+ }
 section {
   margin: 0 0 20px 0;
 }
@@ -127,7 +133,14 @@ footer div.social {
     display: flex;
     justify-content: flex-end;
   }
-
-  
-  
-} 
+}
+// Typography
+ body {
+  font: 1.6rem Arial, Helvetica, sans-serif;
+  color: #1a1a1a;
+  background-color: green;
+ }
+ .nav>div>a {
+   color: white;
+   font-size: 3.2rem;
+ }
